@@ -1,0 +1,164 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --white: hsl(0, 0%, 100%);
+  --navy-blue: #007bff;
+  --dark-blue: #00008b;
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url("./fonts/Roboto-Bold.ttf");
+}
+
+/* COMPONENTS */
+
+body {
+  background-color: var(--off-white);
+}
+
+body > header {
+  width: 100%;
+  background-color: var(--off-white);
+  min-height: 8vh;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+main h1 {
+  font-family: "roboto-bold";
+}
+
+main .chat-box {
+  background-color: var(--off-white);
+  padding-bottom: 1rem;
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+.container .chat-header {
+  width: 100%;
+  background: linear-gradient(180deg, var(--light-grey), var(--navy-blue));
+  padding: 0.5rem 1rem;
+}
+
+.chat-header img {
+  max-width: 50px;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.chat-header p {
+  font-family: "roboto-regular";
+  font-weight: bold;
+}
+
+.chat-container {
+  height: 300px;
+  overflow-y: scroll;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  font-family: "roboto-regular";
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#userInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 80px;
+  font-family: "roboto-regular";
+  padding: 20px;
+}
+
+#userInput::placeholder {
+  font-family: "roboto-regular";
+}
+
+#sendButton {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 3rem 0.5rem 0.5rem;
+  transition: background-color 0.3s linear;
+  font-family: "roboto-regular";
+}
+
+#sendButton:hover {
+  background-color: var(--dark-blue);
+}
+
+#sendButton img {
+  max-width: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* STAND BY ELEMENT */
+
+.user-message {
+  background-color: #f1f0f0;
+  margin: 0 0 0 auto;
+}
+
+.jamie-message {
+  background-color: #e3f2fd;
+  text-align: left;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  max-width: max-content;
+  font-family: "roboto-regular";
+}
+
+.message-time {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+  font-family: "roboto-regular";
+}
+
+.senderName {
+  font-family: "roboto-regular";
+  color: grey;
+  font-size: 0.8rem;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  margin: 2rem;
+}
